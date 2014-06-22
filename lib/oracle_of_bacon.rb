@@ -47,6 +47,7 @@ class OracleOfBacon
   def make_uri_from_arguments
     # your code here: set the @uri attribute to properly-escaped URI
     #   constructed from the @from, @to, @api_key arguments
+    @uri = 'http://oracleofbacon.org/cgi-bin/xml?p=' + @api_key + '&a=' + CGI.escape(@from) + '&b=' + CGI.escape(@to)
   end
       
   class Response
